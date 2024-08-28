@@ -4,13 +4,15 @@ import Card from './card.js';
 import { data } from './details.js';
 
 export default function Home() {
-  const [search, setSearch] = useState('');
-  const [price, setPrice] = useState(10000); 
+  const [search, setSearch] = useState(''); // for seraarching with keyword matching
+  const [price, setPrice] = useState(10000); //for filtering with price
+  const [rating, setRating] = useState(5);   // for filtering with rating
 
-  
+  // fileters data accordint to keyword, price and rating 
   const filteredData = data.filter((item) =>
     item.product_name.toLowerCase().includes(search.toLowerCase()) &&
-    item.price <= price
+    item.price <= price &&
+    item.rating <= rating
   );
 
   return (
@@ -20,8 +22,8 @@ export default function Home() {
         id="default-search"
         className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         placeholder="Search an item"
-        value={search} // Controlled input for search
-        onChange={(e) => setSearch(e.target.value)} // Update search state
+        value={search} 
+        onChange={(e) => setSearch(e.target.value)} 
       />
 
       <div className="mt-4">
@@ -35,6 +37,22 @@ export default function Home() {
           max="10000"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
+          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+        />
+      </div>
+
+      <div className="mt-4">
+        <label htmlFor="rating-range" className="block text-sm font-medium text-gray-700">
+          Maximum Rating: {rating}
+        </label>
+        <input
+          type="range"
+          id="rating-range"
+          min="1"
+          max="5"
+          step="1"
+          value={rating}
+          onChange={(e) => setRating(e.target.value)}
           className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
         />
       </div>
