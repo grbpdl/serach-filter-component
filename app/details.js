@@ -15,7 +15,7 @@ export const data=[{
     "rating": 4
   }, {
     "id": 4,
-    "product_name": "Salt And Pepper Mix - White",
+    "product_name": "Pasta - White",
     "price": 4269,
     "rating": 4
   }, {
@@ -50,7 +50,7 @@ export const data=[{
     "rating": 1
   }, {
     "id": 11,
-    "product_name": "Wine - Baron De Rothschild",
+    "product_name": "Iaitalian Pasta - Baron De Rothschild",
     "price": 3370,
     "rating": 1
   }, {
@@ -70,7 +70,7 @@ export const data=[{
     "rating": 0
   }, {
     "id": 15,
-    "product_name": "Flour - Semolina",
+    "product_name": "Flour - Pasta",
     "price": 1242,
     "rating": 5
   }, {

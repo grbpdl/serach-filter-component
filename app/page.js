@@ -1,12 +1,21 @@
 'use client'
 import React, { useState } from 'react';
-import Card from './card.js';
 import { data } from './details.js';
 
 export default function Home() {
   const [search, setSearch] = useState(''); // for seraarching with keyword matching
   const [price, setPrice] = useState(10000); //for filtering with price
-  const [rating, setRating] = useState(5);   // for filtering with rating
+  const [rating, setRating] = useState(5); // for filtering with rating
+
+  const Card = ({ name, price, rating }) => {
+    return (
+      <div className='w-auto h-100 bg-white m-2 p-1 text-black rounded'>
+        <p>Name:{name}</p>
+        <p>Price: {price}</p>
+        <p>Rating: {rating}</p>
+      </div>
+    );
+  };
 
   // fileters data accordint to keyword, price and rating 
   const filteredData = data.filter((item) =>
