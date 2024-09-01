@@ -36,7 +36,7 @@ export default function Home() {
       />
 
       <div className="mt-4">
-        <label htmlFor="price-range" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="price-range" className="block text-sm font-medium text-white">
           Maximum Price: {price}
         </label>
         <input
@@ -46,12 +46,12 @@ export default function Home() {
           max="10000"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-white"
         />
       </div>
 
       <div className="mt-4">
-        <label htmlFor="rating-range" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="rating-range" className="block text-sm font-medium text-white">
           Maximum Rating: {rating}
         </label>
         <input
@@ -62,7 +62,7 @@ export default function Home() {
           step="1"
           value={rating}
           onChange={(e) => setRating(e.target.value)}
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-white"
         />
       </div>
 
